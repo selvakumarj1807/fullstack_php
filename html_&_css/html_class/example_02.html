@@ -1,0 +1,253 @@
+<!--
+
+Marquee Tag:
+
+	The <marquee> tag in HTML is used to create a scrolling text or an image. 
+	It is an HTML element that is used to scroll certain text or image across a web page.
+	
+Attributes of the <marquee> tag include:
+	
+	1. direction: Specifies the direction of the scrolling content. The values can be left, right, up, or down .
+	2. bgcolor: Specifies the background color of the scrolling content.
+	3. height and width: Specifies the height and width of the scrolling content.
+	4. scrollamount: Specifies the speed of the scrolling content.
+	5. loop: Specifies the scrolling content moving count.
+
+-->
+
+<!--
+	In HTML, the following tags are used to create tables:
+
+		1. <table>: Defines a table
+		2. <tr>: Defines a table row
+		3. <th>: Defines a header cell in a table
+		4. <td>:Defines a regular cell in a table
+		5. <thead>: Groups the header content in a table
+		6. <tbody>: Groups the body content in a table
+		7. <tfoot>: Groups the footer content in a table
+		8. <colgroup>: Specifies a group of one or more columns in a table for formatting
+		9. <col>: Specifies column properties for each column within a <colgroup> element.
+	   10. <caption>: Defines the caption for a table.
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 02</title>
+</head>
+
+<body bgcolor="lightyellow">
+
+    <center>
+        <h1 style="color: green">Marquee Tag - Form Tag - Table Tag</h1>
+    </center>
+
+    <hr align="center" width="70%" size="3" color="skyblue">
+
+    <marquee bgcolor="yellow" height="50px" direction="up" style="text-align: center;" scrollamount="2">
+        <p style="color: blue;">
+            We help organizations across private, public, and social sectors create
+            on the Change that Matters most to them. 5 Years of experience in
+            Software Development ...
+        </p>
+    </marquee>
+
+    <hr>
+    <br>
+
+    <center>
+        <marquee bgcolor="pink" height="50px" width="900px" direction="right">
+            <p style="color: red">
+                Table & Forms
+            </p>
+        </marquee>
+    </center>
+
+    <br>
+    <hr>
+
+    <h1><u>Form Element in HTML</u></h1>
+    <h1>Registration Form</h1>
+    <p>Please fill out this form with the required information</p>
+
+    <form>
+
+        <fieldset>
+
+            <legend>Personal Details</legend>
+
+            <label>Enter Your First Name: </label><br>
+            <input type="text" required /><br>
+
+            <label>Enter Your Last Name: </label><br>
+            <input type="text" required /><br>
+
+            <label>Enter Your Email: </label><br>
+            <input type="email" required /><br>
+
+            <label>Create a New Password: </label><br>
+            <input type="password" pattern="[a-z0-5]{8,}" required />
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Account Details</legend>
+
+            <input type="radio" name="account-type" />
+            <label for="personal-account"> Personal Account</label>
+            <br>
+
+            <input type="radio" name="account-type" />
+            <label for="business-account">Business Account</label>
+            <br>
+
+            <input type="checkbox" required />
+            <label>I accept the <a href="#">terms and conditions</a></label>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>BioData</legend>
+
+            <label>Upload a profile picture: </label>
+            <input type="file" />
+            <br>
+
+            <label>Input your age (years): </label><br>
+            <input type="number" min="13" max="120" />
+            <br>
+
+            <label>How did you hear about us? </label><br>
+            <select>
+                <option value="1">(select one)</option>
+                <option value="2">News</option>
+                <option value="3">YouTube Channel</option>
+                <option value="4">Forum</option>
+                <option value="5">Other</option>
+            </select>
+            <br>
+
+            <label>Provide a bio:</label><br>
+            <textarea rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+            <br>
+
+        </fieldset>
+
+        <br><br>
+        <input type="submit" value="Submit" />
+        <button type="reset">Reset</button>
+
+    </form>
+
+    <hr>
+    <br>
+
+    <h1><u>Table Element in H<sub>T</sub>M<sup>L</sup></u></h1>
+
+    <center>
+
+        <table border='3' cellpadding='10' cellspacing='5'>
+            <caption>Table 1.1</caption>
+
+            <colgroup>
+                <col span="2" bgcolor="yellow">
+                <col span="6" bgcolor="#e2ddb8">
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th colspan='8'>Mark List</th>
+                </tr>
+                <tr>
+                    <th>SNO</th>
+                    <th>NAME</th>
+                    <th>ROLLNO</th>
+                    <th>Marks</th>
+                    <th>TAMIL</th>
+                    <th>ENGLISH</th>
+                    <th>MATHS</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>lol</td>
+                    <td>101</td>
+                    <td rowspan="7">Marks</td>
+                    <td>76</td>
+                    <td>96</td>
+                    <td>90</td>
+                    <td>272</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Sam</td>
+                    <td>102</td>
+                    <td bgcolor='red'>
+                        <font color='white'>85</font>
+                    </td>
+                    <td>79</td>
+                    <td>99</td>
+                    <td>282</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ram</td>
+                    <td>101</td>
+                    <td>76</td>
+                    <td>96</td>
+                    <td>90</td>
+                    <td>272</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Sam</td>
+                    <td>102</td>
+                    <td>85</td>
+                    <td>79</td>
+                    <td>99</td>
+                    <td>282</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Ram</td>
+                    <td>101</td>
+                    <td>76</td>
+                    <td>96</td>
+                    <td>90</td>
+                    <td>272</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Sam</td>
+                    <td>102</td>
+                    <td>85</td>
+                    <td>79</td>
+                    <td>99</td>
+                    <td>282</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr style="background-color: blueviolet;">
+                    <th colspan='7'>Total</th>
+                    <th>850</th>
+                </tr>
+            </tfoot>
+
+        </table>
+
+    </center>
+
+</body>
+
+</html>
