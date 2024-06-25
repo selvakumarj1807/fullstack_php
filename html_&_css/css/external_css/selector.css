@@ -1,0 +1,19 @@
+h1{
+    background-color: aqua;
+    color: brown;
+}
+
+#id_01{
+    background-color: blanchedalmond;
+    color: blue;
+}
+
+#id_02{
+    background-color: blueviolet;
+    color: cadetblue;
+}
+
+.class_01{
+    background-color: burlywood;
+    color: chartreuse;
+}
