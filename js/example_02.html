@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+<head>
+    <script>
+        function oddEven() {
+            var numOne;
+            numOne = parseInt(document.getElementById("first").value);
+            if (numOne % 2 == 0) {
+                document.getElementById("answer").value = numOne + " is even";
+            }
+            else {
+                document.getElementById("answer").value = numOne + " is odd";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <p>Enter the Number is Odd or even: <input id="first"></p>
+
+    <button onclick="oddEven()">Check</button>
+    <p>Sum = <input id="answer"></p>
+
+</body>
+
+</html>
