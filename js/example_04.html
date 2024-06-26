@@ -1,0 +1,49 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        alert("hi");
+    </script>
+
+    <h1>Select by tag from id</h1>
+
+    <input placeholder="enter the id"> <br>
+
+    <div id="mydiv">
+        <input placeholder="enter the name"> <br>
+        <input placeholder="enter the age"> <br>
+        <input placeholder="enter the mobile number"> <br>
+        <input placeholder="enter the email"> <br><br>
+    </div>
+
+    <button onclick="check()">SUBMIT</button>
+
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+
+    <script>
+        function check() {
+            area = document.getElementById("mydiv");
+            box = area.getElementsByTagName("input");
+
+            data = document.getElementsByTagName("p");
+            /*
+                        data[0].innerHTML = box[0].value;
+                        data[1].innerHTML = box[1].value;
+                        data[2].innerHTML = box[2].value;
+            */
+
+            for (i = 0; i < box.length; i++) {
+                data[i].innerHTML = box[i].value;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
