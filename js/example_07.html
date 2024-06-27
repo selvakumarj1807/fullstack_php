@@ -1,0 +1,48 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <h1> Image Slider using js</h1>
+    <img src="https://images.unsplash.com/photo-1711816769781-0a8194f44399?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8fA%3D%3D" id="m1" height="400" width="400"><br><br>
+    <button onclick="forword()"> <span>Forword > </span></button>
+    <button onclick="backword()"> <span>Backword < </span></button>
+    <script>
+        //x = ["Screenshot (1).png", "Screenshot (2).png", "Screenshot (3).png", "Screenshot (4).png"];
+        //0                   ,   1         ,            2
+
+        x = ["https://plus.unsplash.com/premium_photo-1710451835384-3504b3f93bb1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1711924847907-498771a92bde?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1711964180043-19111f068151?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8fA%3D%3D", "https://plus.unsplash.com/premium_photo-1687975124217-797c741d2a40?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8N3x8fGVufDB8fHx8fA%3D%3D"];
+
+        slide = document.getElementById("m1");
+        count = -1;
+        //slide.src=x[0];
+        function forword() {
+            count = count + 1; //count=0
+            if (count <= x.length) //0,1,2,3
+            {
+                if (count == x.length) //3=3
+                {
+                    count = 0;
+                }
+                slide.src = x[count]; //0,1,2,0,1,2
+            }
+            console.log(count);
+        }
+
+        function backword() {
+            count = count - 1; //count=0
+            if (count < x.length) //0,1,2
+            {
+                if (count == -1 || count == -2) {
+                    index = x.length - 1;
+                    count = index;
+                }
+                slide.src = x[count]; //2,1,0,-1,
+            }
+            console.log(count);
+        }
+    </script>
+</body>
+
+</html>

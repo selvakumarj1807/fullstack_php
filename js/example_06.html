@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #8BFC6F;
+        }
+        
+        input {
+            background-color: #EAFAF1;
+            color: blue;
+            width: 100%;
+            height: 35px;
+            font-size: 23px;
+        }
+        
+        h1 {
+            color: #030DE6;
+        }
+        
+        table {
+            border: 0px solid blue;
+            border-collapse: collapse;
+        }
+        
+        td {
+            border: 0px solid blue;
+            width: 400px;
+            height: 70px;
+            text-align: center;
+            font-size: 30px;
+            background-color: #cbb9b1;
+            color: blue;
+            text-align: left;
+            padding: 10px;
+        }
+        
+        span {
+            color: red;
+            font-size: 13px;
+            padding: 10px;
+        }
+        
+        .weak {
+            background-color: red;
+            height: 30px;
+            color: white;
+            padding: 3px;
+        }
+        
+        .mediom {
+            background-color: yellow;
+            height: 30px;
+            color: white;
+            padding: 3px;
+        }
+        
+        .strong {
+            background-color: blue;
+            height: 30px;
+            color: white;
+            padding: 3px;
+        }
+        
+        .verystrong {
+            background-color: green;
+            height: 30px;
+            color: white;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Form validation in JS </h1>
+    <table>
+        <form action="example_01.html" onsubmit="return check()" autocomplete="off">
+
+            <tr>
+                <td> Name:<span>Name is only alphabet</span> </td>
+                <td><input id="name" /> </td>
+            </tr>
+            <tr>
+                <td>Mobile: <span>mobile number is only 10 digit number</span></td>
+                <td><input id="mobile" /> </td>
+            </tr>
+            <tr>
+                <td> Email:<span>fill correct email id(sk@gmail.com)</span> </td>
+                <td><input id="email" /> </td>
+            </tr>
+            <tr>
+                <td> Password: <span>enter above 8 character(aA1@....)</span></td>
+                <td><input id="password" type="password" oninput="checkpass()" onmouseout="mouseout()" /> <span id="span"> </span> </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="signup" /></td>
+            </tr>
+        </form>
+    </table>
+
+    <script>
+        function check() {
+            var inputs = document.getElementsByTagName("input");
+            //alphabet
+            var alpa = /^[A-Za-z]+$/;
+            if (inputs[0].value == "") {
+                alert("Please fill the name");
+                return false;
+            }
+            if (!alpa.test(inputs[0].value)) {
+                alert("Use only alphabet");
+                return false;
+            }
+            //number
+            var number = /^([0-9]{10})+$/; //{5,}//{5,7}
+            if (inputs[1].value == "") {
+                alert("Please fill the mobile");
+                return false;
+            }
+            if (!number.test(inputs[1].value)) {
+                alert("Use only 10 digits");
+                return false;
+            }
+            // email
+            var email = /^([A-Za-z0-9])+@([a-z])+\.([a-z])+$/;
+            if (inputs[2].value == "") {
+                alert("Please fill the email");
+                return false;
+            }
+            if (!email.test(inputs[2].value)) {
+                alert("Enter correct email (sk@gmail.com)");
+                return false;
+            }
+            // password
+            var password = /^((?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,})+$/;
+            if (inputs[3].value == "") {
+                alert("Please fill the password");
+                return false;
+            }
+            if (!password.test(inputs[3].value)) {
+                alert("Enter password with at least 8 characters, one uppercase, one lowercase, one number, and one special character");
+                return false;
+            }
+        }
+
+        function checkpass() {
+            var passwordField = document.getElementById("password");
+            var length = passwordField.value.length;
+            var span = document.getElementById("span");
+
+            if (length < 3) {
+                span.className = "weak";
+                span.innerHTML = "Very weak";
+            } else if (length >= 3 && length <= 5) {
+                span.className = "mediom";
+                span.innerHTML = "Medium";
+            } else if (length >= 6 && length < 8) {
+                span.className = "strong";
+                span.innerHTML = "Strong";
+            } else if (length >= 8) {
+                span.className = "verystrong";
+                span.innerHTML = "Very strong";
+            }
+        }
+
+        function mouseout() {
+            var span = document.getElementById("span");
+            span.classList.remove("weak", "mediom", "strong", "verystrong");
+            span.innerHTML = "";
+        }
+    </script>
+</body>
+
+</html>
