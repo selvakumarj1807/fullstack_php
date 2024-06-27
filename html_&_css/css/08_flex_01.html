@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        .container {
+            border: 5px solid black;
+            padding: 10px;
+        }
+        
+        .box {
+            padding: 30px;
+            border: 5px solid red;
+            margin: 10px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        /* Flex Box*/
+        /* 
+        flex-direction: column;
+        flex-direction: column-reverse;
+        flex-direction: row;
+        flex-direction: row-reverse;
+        */
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .box:nth-child(odd) {
+            background-color: teal;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Flex Direction</h2>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+</body>
+
+</html>
