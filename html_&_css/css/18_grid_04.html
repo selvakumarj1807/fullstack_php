@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: lightpink;
+        }
+        
+        .layout div {
+            border: 1px solid black;
+            background-color: lightblue;
+            font-size: 2rem;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        /*
+
+        .layout{
+            display: grid;
+            grid-template-columns: repeat(5,1fr); 
+            grid-template-areas: 
+            "h h h h h"
+            "sb1 m m m sb2"
+            "f f f f f"
+            ;
+        }
+
+       */
+        
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: "h h h" "sb1 m sb2" "f f f";
+        }
+        
+        .header {
+            grid-area: h;
+        }
+        
+        .sidebar1 {
+            grid-area: sb1;
+        }
+        
+        .sidebar2 {
+            grid-area: sb2;
+        }
+        
+        .main {
+            grid-area: m;
+        }
+        
+        .footer {
+            grid-area: f;
+        }
+        
+        .layout {
+            grid-template-rows: 10vh 80vh 10vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <div class="header">Header</div>
+        <div class="sidebar1">Sidebar 1</div>
+        <div class="main">Main content</div>
+        <div class="sidebar2">Sidebar 2</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+
+</html>
