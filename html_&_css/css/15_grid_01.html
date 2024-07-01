@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: lightpink;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            /* (1). 200px 300px ,(2). 1fr 2fr 1fr ,(3) 200px 300px auto ,(4) 1fr 1fr 1fr 1fr ,(5) repeat(3,1fr) ,(6) minmax(200px,1fr) 1fr 1fr ,(7) minmax(200px,1fr) 1fr 1fr ,(8) repeat(auto-fit,minmax(200px,1fr)) */
+            grid-template-rows: 1fr 2fr 1fr;
+            /*
+            column-gap: 20px;
+            row-gap: 20px;
+            */
+            gap: 20px;
+        }
+        
+        .para {
+            padding: 1rem;
+            background-color: steelblue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="color: slateblue;">The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.</h2>
+
+
+    <div class="container">
+
+        <div class="para">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt officia dolore reprehenderit doloribus, dolorem quisquam?</p>
+        </div>
+        <div class="para">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt officia dolore reprehenderit doloribus, dolorem quisquam?</p>
+        </div>
+        <div class="para">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt officia dolore reprehenderit doloribus, dolorem quisquam?</p>
+        </div>
+        <div class="para">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt officia dolore reprehenderit doloribus, dolorem quisquam?</p>
+        </div>
+        <div class="para">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt officia dolore reprehenderit doloribus, dolorem quisquam?</p>
+        </div>
+        <div class="para">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt officia dolore reprehenderit doloribus, dolorem quisquam?</p>
+        </div>
+        <div class="para">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt officia dolore reprehenderit doloribus, dolorem quisquam?</p>
+        </div>
+        <div class="para">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt officia dolore reprehenderit doloribus, dolorem quisquam?</p>
+        </div>
+        <div class="para">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt officia dolore reprehenderit doloribus, dolorem quisquam?</p>
+        </div>
+        <div class="para">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt officia dolore reprehenderit doloribus, dolorem quisquam?</p>
+        </div>
+
+    </div>
+</body>
+
+</html>
